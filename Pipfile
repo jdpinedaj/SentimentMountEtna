@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+click = "==8.0.3"
+imblearn = "==0.0"
+nltk = "==3.6.7"
+pycaret = "==2.3.3"
+PyYAML = "==6.0"
+Scrapy = "==2.5.1"
+jupyterlab = "*"
+
+[dev-packages]
+yapf = "*"
+
+[requires]
+python_version = "3.8"

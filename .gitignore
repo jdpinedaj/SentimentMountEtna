@@ -1,0 +1,30 @@
+# data
+data/*
+!data/trip_spyder.py
+predict/data_predicted.csv
+
+# folders
+document
+output
+catboost_info
+mlruns
+__pycache__
+
+# models
+mode/*
+
+# logs
+log
+*.log
+
+# vscode
+.vscode
+
+# envs
+.env
+Pipfile.lock
+
+# others
+.idea
+.ipynb_checkpoints
+requirements.txt
