@@ -12,7 +12,7 @@ To be able to run this app, you need to have:
 * [Python 3.8](https://www.python.org/downloads/)
 * Run the code using the pipenv shell:
 ```
-sudo apt install pipenv
+sudo apt install pipenv -y
 pipenv shell
 pipenv install --skip-lock
 ```

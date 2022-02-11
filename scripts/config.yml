@@ -1,5 +1,5 @@
 nlp:
-  raw_data_file: "data/mount_etna.csv"
+  raw_data_file: "data/mount_etna_data.csv"
   model_title_path: "model/model_title"
   model_review_path: "model/model_review"
   dimensions_path: "data"
