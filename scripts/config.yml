@@ -1,19 +1,19 @@
 nlp:
   raw_data_file: "data/mount_etna_data.csv"
-  model_title_path: "model/model_title"
-  model_review_path: "model/model_review"
+  model_title_path: "models/model_title"
+  model_review_path: "models/model_review"
   dimensions_path: "data"
 
 classification:
   lda_review_data_tuned: "data/lda_review_data_tuned.csv"
   lda_title_data_tuned: "data/lda_title_data_tuned.csv"
   predictions_path: "data"
-  model_classification_path: "model/classification"
+  model_classification_path: "models/classification"
 
 predict:
-  model_title: "model/model_title"
-  model_review: "model/model_review"
-  model_classification: "model/classification"
+  model_title: "models/model_title"
+  model_review: "models/model_review"
+  model_classification: "models/classification"
   data_to_predict: "predict/data_to_predict.csv"
   predictions_path: "predict"
   export_result: True
