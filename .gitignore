@@ -12,6 +12,7 @@ __pycache__
 
 # models
 models/*
+!models/.gitkeep
 
 # logs
 log
