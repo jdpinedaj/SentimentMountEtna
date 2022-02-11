@@ -26,8 +26,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 ##################
 # Constants
 ##################
-#logger.info("-------------------Reading constants-------------------")
-
+# Links to read
 START_URLS = utility.links
 
 # Absolute xpath
@@ -38,19 +37,14 @@ AUTHOR_XPATH = ".//span/span/div[1]/div[1]/div[2]/span/a/text()"
 PROFILE_URL_XPATH = ".//div[1]/a/@href"
 PLACE_XPATH = ".//span/span/div[1]/div[1]/div[2]/div/div/span[1]/text()"
 CONTRIBUTIONS_XPATH = ".//span/span/div[1]/div[1]/div[2]/div/div/span[2]/text()"
-
 TITLE_XPATH = ".//span/span/a/div/span/text()"
 CONTENT_XPATH = ".//div[contains(@style,'-webkit-line-clamp')]/div/span/text()"
 DATE_XPATH = ".//span/span/div[last()]/div[1]/text()"
-
 RATING_XPATH = './/span/span/div[3]/svg/@title'
-
-#logger.info("Constants are read.")
 
 ##################
 # Functions to parse
 ##################
-#logger.info("-------------------Reading functions to parse-------------------")
 
 
 def parse_profile_url(url: str) -> str:
@@ -73,12 +67,9 @@ def parse_contributions(contributions_text: str) -> int:
     return int(''.join(re.findall(r"\d", contributions_text)))
 
 
-#logger.info("Functions to parse are read.")
-
 ##################
 # Getting data and saving it
 ##################
-#logger.info("-------------------Getting data and saving it-------------------")
 
 
 class Comment(Item):
@@ -124,13 +115,3 @@ class TripAdvisorSpider(Spider):
         if len(next_pages) > 0:
             for next_page in next_pages:
                 yield response.follow(next_page, self.parse)
-
-    ### TODO: put the following command to save the data
-    # command_execution = config["get_data"]["command_execution"]
-
-    #logger.info("Data saved")
-
-
-'''
-if __name__ == "__main__":
-    get_data()'''
