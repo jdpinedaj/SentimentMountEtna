@@ -1,5 +1,6 @@
 # data
 data/*
+!data/.gitkeep
 predict/data_predicted.csv
 
 # folders
@@ -28,3 +29,4 @@ Pipfile.lock
 .idea
 .ipynb_checkpoints
 requirements.txt
+trip_spider.py
