@@ -33,14 +33,15 @@ START_URLS = utility.links
 COMMENTS_BLOCK_XPATH = '//*[@id="REVIEWS"]/section/div[1]/div/div[5]/div'
 
 # Relative xpaths
-AUTHOR_XPATH = ".//span/span/div[1]/div[1]/div[2]/span/a/text()"
+AUTHOR_XPATH = ".//span/div/div[1]/div[1]/div[2]/span/a/text()"
 PROFILE_URL_XPATH = ".//div[1]/a/@href"
-PLACE_XPATH = ".//span/span/div[1]/div[1]/div[2]/div/div/span[1]/text()"
-CONTRIBUTIONS_XPATH = ".//span/span/div[1]/div[1]/div[2]/div/div/span[2]/text()"
-TITLE_XPATH = ".//span/span/a/div/span/text()"
+PLACE_XPATH = ".//span/div/div[1]/div[1]/div[2]/div/div/span[1]/text()"
+CONTRIBUTIONS_XPATH = ".//span/div/div[1]/div[1]/div[2]/div/div/span[2]/text()"
+TITLE_XPATH = ".//span/div/div[4]/a/span/text()"
 CONTENT_XPATH = ".//div[contains(@style,'-webkit-line-clamp')]/div/span/text()"
-DATE_XPATH = ".//span/span/div[last()]/div[1]/text()"
-RATING_XPATH = './/span/span/div[3]/svg/@title'
+#DATE_XPATH = ".//span/span/div[last()]/div[1]/text()"
+DATE_XPATH = ".//span/div/div[8]/div[1]/text()"
+RATING_XPATH = './/span/div/div[3]/svg/@title'
 
 ##################
 # Functions to parse
@@ -60,6 +61,7 @@ def parse_place(place_content: str) -> Union[str, None]:
 
 
 def parse_date(date_text: str) -> str:
+    date_text = date_text.replace('Written ', '')
     return date_text
 
 
