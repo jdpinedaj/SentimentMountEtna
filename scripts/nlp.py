@@ -18,11 +18,13 @@ from pycaret.nlp import *
 import pandas as pd
 import numpy as np
 import spacy
+from collections import Counter
 
 spacy.load("en_core_web_sm")
 
 # NLTK
 import nltk
+from nltk import word_tokenize
 
 nltk.download('stopwords')
 nltk.download('wordnet')
@@ -102,10 +104,41 @@ def nlp(config_file):
 
     # Defining noise words
     logger.info("Defining noise words.")
-    noise_words = []
     stopwords_corpus = nltk.corpus.stopwords
     eng_stop_words = stopwords_corpus.words('english')
-    noise_words.extend(eng_stop_words)
+
+    ## For title
+    noise_words_title = []
+    token_lists_title = [word_tokenize(each) for each in data['title']]
+    tokens_title = [item for sublist in token_lists_title for item in sublist]
+
+    one_percentile_title = int(len(set(tokens_title)) * 0.01)
+    top_1_percentile_title = Counter(tokens_title).most_common(
+        one_percentile_title)
+    bottom_1_percentile_title = Counter(
+        tokens_title).most_common()[-one_percentile_title:]
+
+    noise_words_title.extend(eng_stop_words)
+    noise_words_title.extend([word for word, val in top_1_percentile_title])
+    noise_words_title.extend([word for word, val in bottom_1_percentile_title])
+
+    ## For review
+    noise_words_review = []
+    token_lists_review = [word_tokenize(each) for each in data['content']]
+    tokens_review = [
+        item for sublist in token_lists_review for item in sublist
+    ]
+
+    one_percentile_review = int(len(set(tokens_review)) * 0.01)
+    top_1_percentile_review = Counter(tokens_review).most_common(
+        one_percentile_review)
+    bottom_1_percentile_review = Counter(
+        tokens_review).most_common()[-one_percentile_review:]
+
+    noise_words_review.extend(eng_stop_words)
+    noise_words_review.extend([word for word, val in top_1_percentile_review])
+    noise_words_review.extend(
+        [word for word, val in bottom_1_percentile_review])
 
     logger.info("End data transformation and feature engineering")
 
@@ -120,7 +153,7 @@ def nlp(config_file):
     exp_name = setup(data=data[['title', 'sentiment_rating']],
                      target='title',
                      session_id=42,
-                     custom_stopwords=noise_words)
+                     custom_stopwords=noise_words_title)
 
     # Training model
     logger.info(f"Training model")
@@ -154,7 +187,7 @@ def nlp(config_file):
     exp_name = setup(data=data[['content', 'sentiment_rating']],
                      target='content',
                      session_id=42,
-                     custom_stopwords=noise_words)
+                     custom_stopwords=noise_words_review)
 
     # Training model
     logger.info(f"Training model")

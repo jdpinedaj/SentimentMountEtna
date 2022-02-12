@@ -71,6 +71,8 @@ def classification(config_file):
     ],
                      axis=1)
     data = data.rename(columns={'Review_sentiment_rating': 'sentiment_rating'})
+    data = data.dropna(subset=['Title_title', 'Review_content']).reset_index(
+        drop=True)
 
     logger.info(f"shape: {data.shape}")
 

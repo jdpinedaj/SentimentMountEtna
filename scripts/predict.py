@@ -129,6 +129,8 @@ def predict(config_file):
     logger.info(f"-------------------Merging data-------------------")
 
     data = pd.concat([predictions_title, predictions_review], axis=1)
+    data = data.dropna(subset=['Title_title', 'Review_content']).reset_index(
+        drop=True)
     logger.info(f"shape: {data.shape}")
 
     logger.info("End Load and merge data")
