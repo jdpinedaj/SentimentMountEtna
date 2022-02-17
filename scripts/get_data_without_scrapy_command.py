@@ -3,13 +3,12 @@
 This script is used to get data from TripAdvisor.
 
 Usage:
-    scrapy runspider ./scripts/get_data.py -o ./data/mount_etna_data.csv -t csv
+    python3 ./scripts/get_data_without_scrapy_command.py
 
 """
 ##################
 # Importing libraries
 ##################
-
 import click
 from scrapy.item import Field
 from scrapy.item import Item

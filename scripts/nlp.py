@@ -57,7 +57,7 @@ def nlp(config_file):
     ##################
     # configure logger
     ##################
-    logger = set_logger("./log/nlp.log")
+    logger = set_logger("./script_logs/nlp.log")
 
     ##################
     # Load config from config file

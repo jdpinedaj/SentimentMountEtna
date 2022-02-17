@@ -42,7 +42,7 @@ def predict(config_file):
     ##################
     # configure logger
     ##################
-    logger = set_logger("./log/predict.log")
+    logger = set_logger("./script_logs/predict.log")
 
     ##################
     # Load config from config file

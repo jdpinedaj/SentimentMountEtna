@@ -10,12 +10,16 @@ catboost_info
 mlruns
 __pycache__
 
+# scripts
+scripts/get_data_without_scrapy_command.py
+
 # models
 models/*
 !models/.gitkeep
 
 # logs
-log
+scriptlogs
+logs
 *.log
 
 # vscode
@@ -30,3 +34,5 @@ Pipfile.lock
 .ipynb_checkpoints
 requirements.txt
 trip_spider.py
+plugins
+esp.txt

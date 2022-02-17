@@ -1,5 +1,5 @@
 [[source]]
-url = "https://pypi.org/simple"
+url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
@@ -10,10 +10,8 @@ nltk = "==3.6.7"
 pycaret = "==2.3.3"
 PyYAML = "==6.0"
 Scrapy = "==2.5.1"
-jupyterlab = "*"
 
 [dev-packages]
-yapf = "*"
 
 [requires]
 python_version = "3.8"

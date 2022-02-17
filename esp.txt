@@ -1,0 +1,33 @@
+
+DATA SCIENTIST
+
+1. Leer comentarios de TripAdvisor y guardarlos en excel : WEB SCRAPING
+2. FILTRAR comentarios con terminos relacionados con TRANSPORTE
+3. ANALIZAR posibilidad de agrupar comentarios en TEMAS para los TITULOS y los CONTENIDOS : TOPIC MODELING > NATURAL LANGUAGE PROCESSING > MACHINE LEARNING
+4. a CADA TITULO y CONTENIDO le vamos a asignar PROBABILIDAD de pertenecer a cada uno de los temas del punto anterior.
+5. Con base en esas PROBABILIDADES, vamos a PREDECIR si el (TITULO+CONTENIDO) es BUENO (4 o 5 estrellas) o MALO (1 o 2 estrellas): MODELO DE CLASIFICACION > MACHINE LEARNING
+6. EVALUAR EL MODELO
+7. GUARDAR el mejor modelo
+
+
+
+
+DATA ENGINEER - PONER el modelo en produccion
+
+1. TOMAR ANALISIS del Data Scientist y CONVERTIRLOS a codigo "limpio" (scripts)
+2. CONFIGURAR el PROCESO para EJECUTAR facilmente
+
+
+
+CLASIFICACION: GRUPOS
+REGRESION: NUMEROS
+AGRUPAMIENTO
+NATURAL LANGUAGE PROCESSING: 1. ANALISIS DE SENTIMIENTO, 2: MODELACION DE TEMAS
+
+
+
+
+
+
+
+ 
