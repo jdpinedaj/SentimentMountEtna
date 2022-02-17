@@ -18,7 +18,8 @@ models/*
 !models/.gitkeep
 
 # logs
-scriptlogs
+script_logs/*
+!script_logs/.gitkeep
 logs
 *.log
 
