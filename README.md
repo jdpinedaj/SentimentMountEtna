@@ -11,7 +11,7 @@ This model implements a Latent Dirichlet Allocation method to assign topic model
 To be able to run this app, you need to have:
 * [Python 3.8](https://www.python.org/downloads/)
 ```
-sudo apt install pipenv
+sudo apt install pipenv -y
 pipenv shell
 pipenv install --skip-lock
 ```
@@ -21,8 +21,8 @@ Once the configuration is complete, it's time to run this app.
 Simply run the following command lines below in a terminal:
 ```
 scrapy runspider ./scripts/get_data.py -o ./data/mount_etna_data.csv -t csv
-pipenv run python -m spacy download en_core_web_sm &&
-pipenv run python ./scripts/nlp.py &&
-pipenv run python ./scripts/classification.py &&
+pipenv run python -m spacy download en_core_web_sm
+pipenv run python ./scripts/nlp.py
+pipenv run python ./scripts/classification.py
 pipenv run python ./scripts/predict.py
 ```
