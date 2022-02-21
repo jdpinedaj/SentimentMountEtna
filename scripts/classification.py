@@ -3,7 +3,7 @@
 This script is used to train and export ML model according to config
 
 Usage:
-    python3 ./scripts/classification.py
+    pipenv run python ./scripts/classification.py
 
 """
 ##################

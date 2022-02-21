@@ -42,7 +42,6 @@ PLACE_XPATH = ".//span/div/div[1]/div[1]/div[2]/div/div/span[1]/text()"
 CONTRIBUTIONS_XPATH = ".//span/div/div[1]/div[1]/div[2]/div/div/span[2]/text()"
 TITLE_XPATH = ".//span/div/div[4]/a/span/text()"
 CONTENT_XPATH = ".//div[contains(@style,'-webkit-line-clamp')]/div/span/text()"
-#DATE_XPATH = ".//span/span/div[last()]/div[1]/text()"
 DATE_XPATH = ".//span/div/div[8]/div[1]/text()"
 RATING_XPATH = './/span/div/div[3]/svg/@title'
 

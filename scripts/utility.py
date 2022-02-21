@@ -15,7 +15,7 @@ def set_logger(log_path):
     Read more about logging: https://www.machinelearningplus.com/python/python-logging-guide/
 
     Args:
-        log_path [str]: eg: "../log/train.log"
+        log_path [str]: eg: "../script_logs/train.log"
     """
     log_path = Path(log_path)
     log_path.parent.mkdir(parents=True, exist_ok=True)
@@ -31,7 +31,7 @@ def set_logger(log_path):
 
 
 TRANSPORT_KEYWORDS = 'transport|rail|cable|car|bus|transportation|mobility|bike'
-
+#TODO: different analysis for cable car, bus, car
 links = [
     "https://www.tripadvisor.com/Attraction_Review-g187888-d195063-Reviews-Mount_Etna-Catania_Province_of_Catania_Sicily.html"
 ]

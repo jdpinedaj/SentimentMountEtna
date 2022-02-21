@@ -3,7 +3,7 @@
 This script is used to extract the dimensions in the titles and the reviews of the data.
 
 Usage:
-    python3 ./scripts/nlp.py
+    pipenv run python ./scripts/nlp.py
 
 """
 ##################
