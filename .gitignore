@@ -11,7 +11,7 @@ mlruns
 __pycache__
 
 # scripts
-scripts/get_data_without_scrapy_command.py
+get_data_without_scrapy_command.py
 
 # models
 models/*
