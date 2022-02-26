@@ -21,6 +21,9 @@ scripts/get_data_without_scrapy_command.py
 # models
 models/*
 !models/.gitkeep
+!models/bus/.gitkeep
+!models/cable/.gitkeep
+!models/car/.gitkeep
 
 # logs
 script_logs/*
