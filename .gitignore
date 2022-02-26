@@ -13,6 +13,11 @@ __pycache__
 # scripts
 scripts/get_data_without_scrapy_command.py
 
+# notebooks
+!notebooks/bus/*.ipynb
+!notebooks/car/*.ipynb
+!notebooks/cable/*.ipynb
+
 # models
 models/*
 !models/.gitkeep

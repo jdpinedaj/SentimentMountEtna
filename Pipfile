@@ -10,8 +10,10 @@ nltk = "==3.6.7"
 pycaret = "==2.3.3"
 PyYAML = "==6.0"
 Scrapy = "==2.5.1"
+jupyterlab = "*"
 
 [dev-packages]
+ipykernel = "*"
 
 [requires]
 python_version = "3.8"
